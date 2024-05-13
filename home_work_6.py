@@ -39,11 +39,11 @@ class Record:
                 return
         raise ValueError("Phone number not found.")
          
-    def find_phone(self, phone):
+    def find_phone(self, this_phone):
         for phone in self.phones:
-            if phone.value == phone:
+            if phone.value == this_phone:
                 return phone
-            return None
+        return None
 
     def __str__(self):
         return f"Contact name: {self.name.value}, phones: {'; '.join(p.value for p in self.phones)}"
